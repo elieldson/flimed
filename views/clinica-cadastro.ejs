@@ -1,0 +1,241 @@
+<%- include includes/header.ejs %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-search form">
+
+
+				<form id="cliente-cadastro">
+
+					<div class="mosaic-item">
+						<h3>Informações</h3>
+						<form id="form-change-profile" class="form">
+							<div class="row">
+								<div class="col-md-3 col-sm-12">
+									<!-- para pegar os dados do usuário, faça como abaixo no campo "value" -->
+									<!-- em caso de dúvidas, consulte src/model/userModel.js para conferir os itens do perfil do usuário -->
+									<input class="fundo-cinza" type="text" name="name" value="<%= user.name %>"
+										placeholder="Nome completo">
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<input class="fundo-cinza" type="email" name="email" placeholder="E-mail">
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<input class="fundo-cinza" type="text" name="crm" placeholder="Número de registro">
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<div class="foto-upload relative">
+										<label for="upload-image">
+											<span class="img">
+												<img src="/views/img/cloud.png" alt="Icon Cloud">
+											</span>
+											<span class="place">Foto de perfil</span>
+										</label>
+
+										<input type="file" id="upload-image" accept=".jpg, .jpeg, .png"
+											onchange="this.form.submit();" class="d-none">
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+									<script
+										src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+									<input class="fundo-cinza" type="text" id="input-phone" name="phone" class="phone"
+										placeholder="Telefone">
+									<script>
+										jQuery("input.phone")
+											.mask("(99) 9999-9999?9")
+											.focusout(function (event) {
+												var target, phone, element;
+												target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+												phone = target.value.replace(/\D/g, '');
+												element = $(target);
+												element.unmask();
+												if (phone.length > 10) {
+													element.mask("(99) 99999-999?9");
+												} else {
+													element.mask("(99) 9999-9999?9");
+												}
+											})
+									</script>
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<div class="select">
+										<select name="genre" class="fundo-cinza">
+											<option disabled>Gênero</option>
+											<option <% if(user.genre === 'Male') { %>selected<% } %>>Masculino</option>
+											<option <% if(user.genre === 'Female') { %>selected<% } %>>Femenino</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<input class="fundo-cinza" type="text" onfocus="(this.type='date')"
+										onblur="(this.type='date')" id="date" name="dataDeAniversario"
+										placeholder="Data de aniversário">
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<input class="fundo-cinza" type="text" name="cpf" placeholder="CPF">
+									<script>
+										jQuery("input[name='cpf']")
+											.mask("999.999.999-99")
+											.focusout(function (event) {
+												var target, phone, element;
+												target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+												phone = target.value.replace(/\D/g, '');
+												element = $(target);
+												element.unmask();
+												if (phone.length > 10) {
+													element.mask("999.999.999-99");
+												} else {
+													element.mask("999.999.999-99");
+												}
+											})
+									</script>
+								</div>
+							</div>
+						</form>
+						<script>
+							$(document).ready(function () {
+								$('#form-change-profile').on('submit', function (e) {
+									e.preventDefault()
+
+									$.ajax({
+										type: 'PUT',
+										url: '/changeProfile',
+										datatype: 'html',
+										contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+										data: $('#form-change-profile').serialize(),
+										success: function (result) {
+											alertify.notify(result, 'success', 5)
+											setTimeout(function () {
+												window.location.reload()
+											}, 500)
+										},
+										error: function (xhr, status, error) {
+											alertify.notify(JSON.parse(xhr.responseText), 'error', 5)
+										},
+									})
+								})
+							})
+						</script>
+					</div>
+
+					<div class="row acessos">
+						<div class="col-md-12">
+							<h3>Permissões de acesso</h3>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Administrador</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Acesso ao sistema</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Agenda médica</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Paciente</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Gerenciar<br>atendimentos</p>
+								<label class="switch label-70p">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Informações<br>financeiras</p>
+								<label class="switch label-70p">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Alterar valor da<br>consulta médica</p>
+								<label class="switch label-90p">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Contabilidade</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Configuração</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Financeiro</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="d-flex justify-content-center align-items-center box-checkbox">
+								<p>Perfil</p>
+								<label class="switch">
+									<input type="checkbox" checked name="compartilhar-com-paciente">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<button class="btn btn-gradient" type="submit" id="submitUsuario">Adicionar</button>
+						</div>
+					</div>
+
+
+				</form>
+				<script src="/views/js/ajax/cliente-cadastro.js"></script>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<%- include includes/footer.ejs %>

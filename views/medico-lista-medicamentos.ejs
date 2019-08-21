@@ -1,0 +1,373 @@
+<%- include includes/header-medico.ejs %>
+
+<section class="box__panel medico-resultado">
+    <div class="container">
+        <div class="row search-inner">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">12</strong> Pacientes Atendidos hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">5</strong> Exames realizados hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">10</strong> Atendimentos totais hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">0</strong> Pacientes faltaram hoje</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 atendimento-paciente historico">
+                    <div class="mosaic-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="title-mosaic"><strong>Lista</strong> de Medicamentos</h2>
+                            </div>
+                            <div class="col-md-8">
+                                <form action="/" method="GET" id="pesquisa" class="form">
+                                    <div class="form-group relative d-flex">
+                                        <input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+                                        <div class="icons-search">
+                                            <a id="filterInput" href="#"><span><img src="/views/img/icone-form.png"
+                                                        alt="Icone form"></span></a>
+                                            <button type="submit"> <span><i class="fa fa-search"></i></span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row paciente-item">
+                            <div class="col-12 separator d-flex">
+                                <div class="nome">
+                                    <p>NOME</p>
+                                </div>
+                                <div class="atendimento">
+                                    <p>GENÉRICO</p>
+                                </div>
+                                <div class="data">
+                                    <p>REDE</p>
+                                </div>
+                                <div class="horario">
+                                    <p>FARMÁCIA</p>
+                                </div>
+                                <div class="horario">
+                                    <p>contraindicações</p>
+                                </div>
+                                <div class="horario">
+                                    <p>PREÇO</p>
+                                </div>
+                                <div class="action">
+                                    <p>AÇÃO</p>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Tylenol</p>
+                                </div>
+                                <div class="generico">
+                                    <p>Paracetamol</p>
+                                </div>
+                                <div class="rede">
+                                    <p>Drogasil</p>
+                                </div>
+                                <div class="farmacia">
+                                    <p>Pague menos</p>
+                                </div>
+                                <div class="contraindicacoes">
+                                    <p>Alcoholic beverage</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$ 14,99</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#edit_medicamento" data-fancybox="medicamentos">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal edit medicamentos -->
+
+    <div class="modal edit-medicamento" id="edit_medicamento">
+        <div class="modal-container">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="edit-pacient--item">
+                            <div class="edit-medicamento__inner">
+                                <div class="inner">
+                                    <span class="title">Tylenol</span>
+                                    <span class="datas">Paracetamol</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="edit-pacient--item">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="edit-medicamento__inner modal-border__r">
+                                        <div class="inner">
+                                            <span class="title">Rede</span>
+                                            <span class="datas">Drogasil</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="edit-medicamento__inner">
+                                        <div class="">
+                                            <span class="title">Farmácia</span>
+                                            <span class="datas">Pague Menos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="edit-pacient--item">
+                            <div class="edit-medicamento__inner">
+                                <div class="inner">
+                                    <span class="title">Preço</span>
+                                    <span class="datas">R$ 14,99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="edit-pacient--item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="inner modal-border__r">
+                                        <h4 class="modal-content__title">Para que serve?</h4>
+                                        <p class="modal-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit.
+                                            Pariatur, natus dolore rem tenetur repudiandae beatae repellendus ratione
+                                            sit
+                                            veniam officia consequatur veritatis amet, asperiores voluptatibus ad,
+                                            soluta.
+                                            Unde, ex placeat. Id totam rem earum blanditiis quidem dolores voluptatum
+                                            laboriosam! Sint iste qui ab eos ipsam soluta et, laboriosam esse quia.</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="inner modal-border__r">
+                                        <h4 class="modal-content__title">Como funciona?</h4>
+                                        <p class="modal-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit.
+                                            Pariatur, natus dolore rem tenetur repudiandae beatae repellendus ratione
+                                            sit
+                                            veniam officia consequatur veritatis amet, asperiores voluptatibus ad,
+                                            soluta.
+                                            Unde, ex placeat. Id totam rem earum blanditiis quidem dolores voluptatum
+                                            laboriosam! Sint iste qui ab eos ipsam soluta et, laboriosam esse quia.</p>
+
+                                        <div class="txt-center">
+                                            <a href="" class="btn btn-dark">VER MAIS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="inner">
+                                        <h4 class="modal-content__title">Como usar?</h4>
+                                        <p class="modal-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit.
+                                            Pariatur, natus dolore rem tenetur repudiandae beatae repellendus ratione
+                                            sit
+                                            veniam officia consequatur veritatis amet, asperiores voluptatibus ad,
+                                            soluta.
+                                            Unde, ex placeat. Id totam rem earum blanditiis quidem dolores voluptatum
+                                            laboriosam! Sint iste qui ab eos ipsam soluta et, laboriosam esse quia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="" class="btn btn-green">EDITAR</a>
+                <a href="" class="btn btn-dark">MENSAGEM</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+<script>
+    jQuery("input[type='date']").on('focus onfocus', () => {
+        jQuery("input[type='date']:before").remove();
+        console.log("Evento focus");
+    });
+
+</script>
+<%- include includes/footer.ejs %>

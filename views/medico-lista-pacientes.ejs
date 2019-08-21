@@ -1,0 +1,292 @@
+<%- include includes/header-medico.ejs %>
+
+<section class="box__panel medico-resultado">
+    <div class="container">
+        <div class="row search-inner">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">12</strong> Pacientes Atendidos hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">5</strong> Exames realizados hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">10</strong> Atendimentos totais hoje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mosaic-item cards">
+                            <p><strong class="number">0</strong> Pacientes faltaram hoje</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 atendimento-paciente historico">
+                    <div class="mosaic-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="title-mosaic"><strong>Lista</strong> de Pacientes</h2>
+                            </div>
+                            <div class="col-md-8">
+                                <form action="/" method="GET" id="pesquisa" class="form">
+                                    <div class="form-group relative d-flex">
+                                        <input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+                                        <div class="icons-search">
+                                            <a id="filterInput" href="#"><span><img src="/views/img/icone-form.png"
+                                                        alt="Icone form"></span></a>
+                                            <button type="submit"> <span><i class="fa fa-search"></i></span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row paciente-item">
+                            <div class="col-12 separator d-flex">
+                                <div class="nome">
+                                    <p>NOME</p>
+                                </div>
+                                <div class="sexo">
+                                    <p>SEXO</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>ENDEREÇO</p>
+                                </div>
+                                <div class="email">
+                                    <p>E-MAIL</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>TELEFONE</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>CONVÊNIO</p>
+                                </div>
+                                <div class="action">
+                                    <p>AÇÃO</p>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            <div class="col-12 info d-flex">
+                                <div class="nome">
+                                    <p>Joseph Jenkins</p>
+                                </div>
+                                <div class="genero">
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="endereco">
+                                    <p>Virginia Beach</p>
+                                </div>
+                                <div class="email">
+                                    <p>email@email.com</p>
+                                </div>
+                                <div class="telefone">
+                                    <p>(85) 3003-0330</p>
+                                </div>
+                                <div class="convenio">
+                                    <p>Hapvida</p>
+                                </div>
+                                <div class="action">
+                                    <a class="ver-mais" href="#modalVerPaciente" data-toggle="modal"
+                                        data-target="#modalVerPaciente">Ver
+                                        mais</a>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    jQuery("input[type='date']").on('focus onfocus', () => {
+        jQuery("input[type='date']:before").remove();
+        console.log("Evento focus");
+    });
+
+</script>
+<%- include includes/footer.ejs %>

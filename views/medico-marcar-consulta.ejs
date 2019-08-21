@@ -1,0 +1,114 @@
+<%- include includes/header-medico.ejs %>
+
+<section class="box__panel medico-marcar-consulta">
+	<div class="container">
+		<div class="row mosaic">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="inner bg-white">
+                            <form action="" class="form bg-inputs">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="label">Esta consulta é para você?</span>
+                                        <span class="io-toggler" data-io="0">
+                                            <span class="io-options">
+                                            <span class="another-person">Sim</span>
+                                                <span class="myself">Não</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span class="label">É a sua primeira visita?</span>
+                                        <span class="io-toggler" data-io="0">
+                                            <span class="io-options">
+                                                <span class="y">Sim</span>
+                                                <span class="n">Não</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span class="label">Esta consulta é?</span>
+                                        <span class="io-toggler" data-io="0">
+                                            <span class="io-options">
+                                                <span class="private">Particular</span>
+                                                <span class="agreement">Convênio</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="select">
+                                            <i class="sprite-form__specialty"></i>
+                                            <select name="" id="" class="select-icon">
+                                                <option value="">Convênio Médico</option>
+                                                <option value="">Hapvida</option>
+                                                <option value="">Unimed</option>
+                                                <option value="">...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="" class="label">Nome</label>
+                                        <input type="text" name="" placeholder="Nome Completo">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="" class="label">E-mail</label>
+                                        <input type="text" name="" placeholder="E-mail">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="" class="label">Telefone</label>
+                                        <input type="text" name="" placeholder="Telefone">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="" class="label">Motivo da visita</label>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="Comentario"></textarea>
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn-submitGrad" style="background: #01E9B5!important;" value="Confirmar Agendamento">
+                            </form>
+                        </div>
+                    </div>
+                    <aside class="col-md-4">
+                        <div class="perfil-doc aside-item">
+                            <div class="consulta__title cor-verde">
+                                <p class="h2">Perfil do Médico</p>
+                            </div>
+                            <div class="consulta__bg perfil-doc__content">
+                                <figure class="perfil-doc__photo cor-verde">
+                                    <img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+                                </figure>
+                                <div class="perfil-doc__dados">
+                                    <h3 class="name">Dr. Jimi Hendrix</h3>
+                                    <p class="speciality">Neurologista</p>
+                                    <p class="address">Fortaleza-CE, Varjota</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="consulta-dados">
+                            <div class="consulta__title cor-verde">
+                                <p class="h2">Cronograma</p>
+                            </div>
+                            <div class="consulta__bg consulta__content">
+                                <p><strong>Sábado</strong>, 16/07/2018</p>
+                                <p>às <strong>14:00</strong> Horas</p>
+                                <p><strong>Valor</strong>: R$ 100</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+			
+			
+			
+		</div>
+	</div>	
+</section>	
+<script>
+		jQuery("input[type='date']").on('focus onfocus', () => {
+				jQuery("input[type='date']:before").remove();
+				console.log("Evento focus");
+		});
+
+		</script>
+<%- include includes/footer.ejs %>

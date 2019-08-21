@@ -1,0 +1,141 @@
+<%- include includes/header-medico.ejs %>
+
+<section class="box__panel medico-resultado">
+	<div class="container">
+		<div class="row search-inner">
+			<div class="container">
+				<div class="col-12 form-search form">
+					<form action="">
+						<div class="row">
+							<div class="col-md-5">
+								<div class="select">
+									<i class="sprite-form__specialty"></i>
+									<select name="" id="" class="select-icon">
+										<option value="">Especialidade</option>
+										<option value="">Gastrologista</option>
+										<option value="">Cardiologista</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<input type="text" name="" placeholder="Nome do Especialista"  class="sprite-form__specialist">
+							</div>
+							<div class="btn-searchInner cor-verde">
+								<input type="submit" value="">
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row mosaic">
+				
+				<div class="col-12 btn-goSearch">
+					<div class="container">
+						<div class="row">
+							<a href="#" class="cor-verde-hover">IR PARA <strong>PESQUISA AVANÇADA</strong></a>
+						</div>
+					</div>
+				</div>
+					
+				<div class="result-section">
+					<div class="container">
+						<div class="box-result">
+							<div class="inner">
+								<div class="form-filter">
+									<div class="select">
+										<i class="sprite-form__filter"></i>
+										<select name="" id="" class="select-icon">
+											<option value="">Por Relevância</option>
+											<option value="">Por Nome</option>
+											<option value="">Por Especialidade</option>
+										</select>
+									</div>
+								</div>
+								<div class="box-result__title">
+									<p class="h3">Resultados da Busca</p>
+								</div>
+								<div class="result-list row">
+									<div class="result-list__item col-md-6">
+										<a href="page-medico-detalhe.php">
+											<div class="inner">
+												<span class="featured cor-verde">Destaque</span>
+												<figure class="result-list__photo cor-verde">
+													<img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+													<div class="medicoOnline"></div>
+												</figure>
+												<div class="result-list__dados">
+													<h3 class="name">Dr. Jimi Hendrix</h3>
+													<p class="speciality">Neurologista</p>
+													<p class="address">Fortaleza-CE, Varjota</p>
+													<span class="price cor-verde">R$ 100</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="result-list__item col-md-6">
+										<a href="page-medico-detalhe.php">
+											<div class="inner">
+												<span class="featured cor-verde">Destaque</span>
+												<figure class="result-list__photo cor-verde">
+													<img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+													<div class="medicoOnline"></div>
+												</figure>
+												<div class="result-list__dados">
+													<h3 class="name">Dr. Jimi Hendrix</h3>
+													<p class="speciality">Neurologista</p>
+													<p class="address">Fortaleza-CE, Varjota</p>
+													<span class="price cor-verde">R$ 100</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="result-list__item col-md-6">
+										<a href="page-medico-detalhe.php">
+											<div class="inner">
+												<figure class="result-list__photo cor-verde">
+													<img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+												</figure>
+												<div class="result-list__dados">
+													<h3 class="name">Dr. Jimi Hendrix</h3>
+													<p class="speciality">Neurologista</p>
+													<p class="address">Fortaleza-CE, Varjota</p>
+													<span class="price cor-verde">R$ 100</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="result-list__item col-md-6">
+										<a href="page-medico-detalhe.php">
+											<div class="inner">
+												<figure class="result-list__photo cor-verde">
+													<img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+												</figure>
+												<div class="result-list__dados">
+													<h3 class="name">Dr. Jimi Hendrix</h3>
+													<p class="speciality">Neurologista</p>
+													<p class="address">Fortaleza-CE, Varjota</p>
+													<span class="price cor-verde">R$ 100</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>			
+			
+		</div>
+	</div>	
+</section>	
+<script>
+		jQuery("input[type='date']").on('focus onfocus', () => {
+				jQuery("input[type='date']:before").remove();
+				console.log("Evento focus");
+		});
+
+		</script>
+<%- include includes/footer.ejs %>

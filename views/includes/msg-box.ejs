@@ -1,0 +1,71 @@
+<% if(user) { %>
+<div class="msg-box" id="msg_box">
+	<div class="container">
+		<div class="msg-box__content">
+			<div class="btn-close" id="btn_close">x</div>
+			<div class="bell-notification" id="notification">
+				<img src="/views/img/sino.png" alt="Bell Icon">
+			</div>
+			<div class="msg-box__content-inner">
+				<h3>Bem-vindo ao Flimed, <strong><%= user.name %></strong>!</h3>
+				<% if(user.usertype === 'MEDICO' || user.usertype === 'CLINICA') { %>
+				<% if(user.purchasesHistoric.plan.length) { %>
+				<% for(let i = 0; i < user.purchasesHistoric.plan.length; i++) { %>
+				<% if(user.purchasesHistoric.plan[i].status === 'ativo') { %>
+				<p>Seu pacote é o <%= user.purchasesHistoric.plan[i].title %></p>
+				<a href="/planos" class="btn btn-msgBox">Alterar</a>
+				<% break %>
+				<% } %>
+				<% } %>
+				<% } else { %>
+				<p>Você ainda não tem um pacote</p>
+				<a href="/planos" class="btn btn-msgBox">Assinar</a>
+				<% } %>
+				<% } %>
+			</div>
+
+			<!-- Modal Notification -->
+
+			<div class="notification-box new-notification-box">
+				<div class="notification-close" id="notification_close">x</div>
+				<h5>Notifications</h5>
+
+				<div class="notification-cart">
+					<figure class="notification-cart__fig">
+						<img src="/views/img/logo-painel-cliente.svg" alt="Logo Notification">
+					</figure>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- End Modal Notification -->
+
+
+		</div>
+	</div>
+</div>
+<% } %>

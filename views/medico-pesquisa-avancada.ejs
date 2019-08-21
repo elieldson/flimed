@@ -1,0 +1,83 @@
+<%- include includes/header-medico.ejs %>
+
+<section class="box__panel medico-anuncios">
+	<div class="container">
+		<div class="row mosaic">            
+            <div class="col-md-12">
+                <div class="mosaic-item">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-search form">
+                                <p class="h3">BUSCAR</p>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="io-toggler" data-io="1">
+                                                <span class="io-options">
+                                                    <span class="clinica">Clínica</span>
+                                                    <span class="doctors">Doutor</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="text" name="" placeholder="Nome do Especialista"  class="sprite-form__specialist">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="text" name="" placeholder="Localização" class="sprite-form__location">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="select">
+                                                <i class="sprite-form__specialty"></i>
+                                                <select name="" id="" class="select-icon">
+                                                    <option value="">Especialidade</option>
+                                                    <option value="">Gastrologista</option>
+                                                    <option value="">Cardiologista</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="date" name="especialista" placeholder="Preference Date" class="sprite-form__date">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="option-radio">
+                                                Privado
+                                                <input type="radio" checked="checked" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="option-radio">
+                                                Convênio Médico
+                                                <input type="radio" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn-gradient" value="Buscar">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 offset-1">
+                            <figure class="fig-doctors">
+                                <img src="/views/img/person-doctors_home.png" alt="Imagem Doutores">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+		</div>
+	</div>	
+</section>	
+<script>
+		jQuery("input[type='date']").on('focus onfocus', () => {
+				jQuery("input[type='date']:before").remove();
+				console.log("Evento focus");
+		});
+
+		</script>
+<%- include includes/footer.ejs %>

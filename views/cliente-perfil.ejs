@@ -1,0 +1,233 @@
+<%- include includes/header-cliente.ejs %>
+
+<section class="box__panel perfil-cliente">
+	<div class="container">
+		<div class="row mosaic">
+			<div class="col-md-12 title-perfil form-relative">
+				<form id="form-change-profile" class="form">
+				<div class="mosaic-item">
+					<h3>Informações</h3>
+						<div class="row">
+							<div class="col-md-3 col-sm-12">
+								<!-- para pegar os dados do usuário, faça como abaixo no campo "value" -->
+								<!-- em caso de dúvidas, consulte src/model/userModel.js para conferir os itens do perfil do usuário -->
+								<input type="text" name="name" value="<%= user.name %>" placeholder="Nome completo">
+							</div>
+							<div class="col-md-3 col-sm-12">
+									<input type="email" name="email" placeholder="E-mail">
+								</div>
+								<div class="col-md-3 col-sm-12">
+										<input type="text" name="cpf" placeholder="CPF">
+										<script>
+												jQuery("input[name='cpf']")
+												.mask("999.999.999-99")
+												.focusout(function (event) {  
+													var target, phone, element;  
+													target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+													phone = target.value.replace(/\D/g, '');
+													element = $(target);  
+													element.unmask();  
+													if(phone.length > 10) {  
+														element.mask("999.999.999-99");  
+													} else {  
+														element.mask("999.999.999-99");  
+													}  
+												})
+										</script>
+									</div>
+							<div class="col-md-3 col-sm-12">
+								<div class="foto-upload relative">
+									<label for="upload-image">
+										<span class="img">
+												<img src="/views/img/cloud.png" alt="Icon Cloud">
+										</span>
+										<span class="place">Foto de perfil</span>
+									</label>
+								
+									<input type="file" id="upload-image" accept=".jpg, .jpeg, .png" onchange="this.form.submit();" class="d-none">
+								</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+										<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+										<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+										<input type="text" id="input-phone" name="phone" class="phone" placeholder="Telefone">
+										<script>
+											jQuery("input.phone")
+											.mask("(99) 9999-9999?9")
+											.focusout(function (event) {  
+												var target, phone, element;  
+												target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+												phone = target.value.replace(/\D/g, '');
+												element = $(target);  
+												element.unmask();  
+												if(phone.length > 10) {  
+													element.mask("(99) 99999-999?9");  
+												} else {  
+													element.mask("(99) 9999-9999?9");  
+												}  
+											})
+										</script>
+									</div>
+									<div class="col-md-3 col-sm-12">
+											<div class="select">
+												<select name="genre">
+													<option disabled>Gênero</option>
+													<option <% if(user.genre === 'Male') { %>selected<% } %>>Masculino</option>
+													<option <% if(user.genre === 'Female') { %>selected<% } %>>Femenino</option>
+												</select>
+											</div>
+										</div>
+									<div class="col-md-3 col-sm-12">
+											<input type="text" onfocus="(this.type='date')" onblur="(this.type='date')" id="date" name="dataDeAniversario" placeholder="Data de nascimento">
+										</div>
+									<div class="col-md-3 col-sm-12">
+										<input type="text" id="endereco" name="endereco-cliente" placeholder="Endereço">
+									</div>
+									<div class="col-md-3 col-sm-12">
+											<input type="text" id="tipo-de-sangue" name="tipo-de-sangue" placeholder="Tipo sanguíneo">
+										</div>
+								<div class="col-md-3 col-sm-12">
+									<div class="select">
+										<select name="estado-civil">
+											<option disabled>Sexo</option>
+											<option >Casado(a)</option>
+											<option >Solteiro(a)</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+										<input type="text" id="vicios" name="vicios" placeholder="Vícios">
+									</div>
+								<div class="col-md-3 col-sm-12">
+										<input type="text" id="plano-de-saude" name="plano-de-saude" placeholder="Plano de saúde">
+									</div>
+								<div class="col-md-12 row-submit">
+									<input type="submit" class="btn btn-gradient" value="Salvar alterações">
+								</div>
+						</div>
+				</div>
+			</form>
+			<script>
+					$(document).ready(function() {
+						$('#form-change-profile').on('submit', function(e) {
+							e.preventDefault()
+							
+							$.ajax({
+								type: 'PUT',
+								url: '/changeProfile',
+								datatype: 'html',
+								contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+								data: $('#form-change-profile').serialize(),
+								success: function(result) {          
+									alertify.notify(result, 'success', 5)
+									setTimeout(function() { 
+											window.location.reload()
+									}, 500)
+								},
+								error: function(xhr, status, error) {
+									alertify.notify(JSON.parse(xhr.responseText), 'error', 5)
+								},
+							})
+						})
+					})
+					</script>
+			</div>
+			<div class="col-md-12 form-relative indicar-paciente">
+				<form action="" class="form">
+					<div class="mosaic-item">
+						<h3>Indiciar um paciente(indique amigos)</h3>
+							<div class="row">
+								<div class="col-md-4">
+									<input type="password" name="name-completo" placeholder="Nome completo">
+								</div>
+								<div class="col-md-4">
+									<input type="email" name="e-mail-indicacao" placeholder="E-mail">
+								</div>
+								<div class="col-md-4">
+									<input type="tel" name="phone-indicacao" placeholder="Telefone">
+								</div>
+							</div>
+							<div class="col-md-12 row-submit">
+								<input type="submit" class="btn btn-gradient" value="Enviar">
+							</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-12 d-none">
+				<div class="mosaic-item">
+					<h3>Informação básica</h3>
+					
+					<form action="" class="form">
+						<div class="row">
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Nome completo">
+							</div>
+							<div class="col-md-3">
+								<input type="date" name="" placeholder="Data de nascimento">
+							</div>
+							<div class="col-md-3">
+								<input type="email" name="" placeholder="E-mail">
+							</div>
+							<div class="col-md-3">
+								<div class="select">
+									<select name="" id="">
+										<option value="">Gênero</option>
+										<option value="">Masculino</option>
+										<option value="">Femenino</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Estado civil">
+							</div>
+							<div class="col-md-3">
+								<input type="tel" name="" placeholder="Cell">
+							</div>
+							<div class="col-md-3">
+								<input type="tel" name="" placeholder="Telefone">
+							</div>
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="CPF">
+							</div>
+							
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="SUS Card">
+							</div>
+							<div class="col-md-3">
+								<div class="select">
+									<select name="" id="">
+										<option value="">Cuidados de saúde</option>
+										<option value="">Plano 1</option>
+										<option value="">Plano 2</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Tipo sanguíneo">
+							</div>
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Endereço">
+							</div>
+							
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Bairro">
+							</div>
+							<div class="col-md-3">
+								<input type="text" name="" placeholder="Complemento">
+							</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<input type="submit" class="btn btn-gradient" value="Salvar Edição">
+								</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+<%- include includes/footer.ejs %>

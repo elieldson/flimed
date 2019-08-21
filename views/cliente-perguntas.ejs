@@ -1,0 +1,170 @@
+<%- include includes/header-cliente.ejs %>
+
+<section class="box__panel clinica-perguntas">
+	<div class="container">
+		<form action="" class="form">
+				<div class="mosaic-item">
+				<div class="row">
+					<div class="col-md-12">
+						<label for="" class="label">Faça perguntas aos profissionais de saúde</label>
+						<input class="input-white" type="text" name="" placeholder="Nome completo">
+					</div>
+					<div class="col-md-3">
+						<label class="option-radio">
+							Para todos
+							<input class="input-white change-quest" id="change-1" type="radio" checked="checked" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="col-md-9">
+						<label class="option-radio">
+							Profissional de saúde específico
+							<input class="input-white change-quest" id="change-2" type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div id="conennt-quest">
+						<div class="todos change-1">
+							<div class="col-md-12">
+								<input class="input-white" type="text" name="" placeholder="Especialidade">
+							</div>
+							<div class="col-md-12">
+								<textarea class="input-white" name="" id="" cols="30" rows="10" placeholder="Pergunta"></textarea>
+							</div>
+						</div>
+						<div class="especifico change-2">
+							
+							<div class="col-md-12 atendimento-paciente historico">
+									<div class="mosaic-item">
+									<div class="row">
+										<div class="col-md-4">
+											<h2 class="title-mosaic"><strong>Perguntas</strong> dos pacientes</h2>
+										</div>
+										<div class="col-md-8">
+											<form action="/" method="GET" id="pesquisa" class="form">
+												<div class="form-group relative d-flex">
+													<input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+													<div class="icons-search">
+														<a id="filterInput" href="#"><span><img src="/views/img/icone-form.png"
+																	alt="Icone form"></span></a>
+														<button type="submit"> <span><i class="fa fa-search"></i></span></button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="row paciente-item">
+										<div class="col-12 separator d-flex">
+											<div class="nome">
+												<p>Nome</p>
+											</div>
+											<div class="atendimento">
+												<p>Tipo de atendimento</p>
+											</div>
+											<div class="data">
+												<p>Data</p>
+											</div>
+											<div class="horario">
+												<p>Horário</p>
+											</div>
+											<div class="action">
+												<p>Ação</p>
+											</div>
+										</div>
+										<div class="col-12 info d-flex">
+											<div class="nome">
+												<img src="/views/img/foto-paciente.png" alt="Imagem do paciente" class="img-responsive img-paciente">
+												<p>Roberto Alves</p>
+											</div>
+											<div class="convenio">
+												<p>Particular</p>
+											</div>
+											<div class="data">
+												<p>13/02/2019</p>
+											</div>
+											<div class="horario">
+												<p>08:00</p>
+											</div>
+											<div class="action">
+												<a class="ver-mais" href="#modalVerPaciente" data-toggle="modal" data-target="#modalVerPaciente">Ver
+													mais</a>
+											</div>
+										</div>
+										<div class="col-12 info d-flex">
+											<div class="nome">
+												<img src="/views/img/foto-paciente.png" alt="Imagem do paciente" class="img-responsive img-paciente">
+												<p>Roberto Alves</p>
+											</div>
+											<div class="convenio">
+												<p>Particular</p>
+											</div>
+											<div class="data">
+												<p>13/02/2019</p>
+											</div>
+											<div class="horario">
+												<p>08:00</p>
+											</div>
+											<div class="action">
+												<a class="ver-mais" href="#modalVerPaciente" data-toggle="modal" data-target="#modalVerPaciente">Ver
+													mais</a>
+											</div>
+										</div>
+										<div class="col-12 info d-flex">
+											<div class="nome">
+												<img src="/views/img/foto-paciente.png" alt="Imagem do paciente" class="img-responsive img-paciente">
+												<p>Roberto Alves</p>
+											</div>
+											<div class="convenio">
+												<p>Particular</p>
+											</div>
+											<div class="data">
+												<p>13/02/2019</p>
+											</div>
+											<div class="horario">
+												<p>08:00</p>
+											</div>
+											<div class="action">
+												<a class="ver-mais" href="#modalVerPaciente" data-toggle="modal" data-target="modalVerPaciente">Ver
+													mais</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+						</div>
+					</div>
+					<div class="col-md-4">
+						<button type="submit" class="btn btn-gradient"> Envie a pergunta</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div  style="margin-top: 20px;">
+		<div class="mosaic-item inner">
+					
+			<div class="result-list row">
+				
+				<div class="result-list__item col-md-6">
+					<a href="page-medico-detalhe.php">
+						<div class="no-shadow inner">
+							<figure class="result-list__photo cor-verde">
+								<img alt="Dr. Guilherme Marques" src="/views/img/medico.jpg">
+							</figure>
+							<div class="result-list__dados">
+								<h3 class="name">Marcos Alves</h3>
+								<p class="address">Cardiologista</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	
+</section>
+
+<%- include includes/footer.ejs %>

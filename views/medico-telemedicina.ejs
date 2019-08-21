@@ -1,0 +1,1156 @@
+<%- include includes/header-medico.ejs %>
+<link rel="stylesheet" href="views/css/new-style.css" />
+
+<section class="box__panel medico-telemedicina">
+    <div class="container">
+        <div class="row search-inner">
+            <div class="">
+                <div class="col-12">
+
+                    <div class="modal-all">
+                        <div class="bg-modal modal-out-d"></div>
+                        <section class="modal-container tel">
+                            <header class="modal__header">
+                                <div>
+                                    Consulta por telemedicina
+                                    <div class="duration">
+                                        Principal queixa: <br />
+                                        Fortes dores na parte abdominal, diarréia, vômito, febre e suor frio durante o
+                                        dia.
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="modal__content">
+                                <div class="modal__content__title">
+                                    <div class="modal__content__title__all">
+                                        <div class="modal__content__icon">
+
+                                        </div>
+                                        <h3>
+                                            Marcelo Dias
+                                            <small>
+                                                Paciente
+                                            </small>
+                                        </h3>
+                                    </div>
+                                    <div class="crm">
+                                        Particular
+                                    </div>
+                                </div>
+                                <div class="btn-all">
+                                    <button class="btn success modal-out">
+                                        ACEITAR
+                                    </button>
+                                    <button class="btn danger modal-out">
+                                        RECUSAR
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="modal-container finish">
+                            <header class="modal__header">
+                                <div>
+                                    Deseja finalizar a consulta?
+                                    <div class="duration">
+                                        Duração do atendimento:
+                                        <span>
+                                            01:30:23
+                                        </span>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="modal__content">
+                                <div class="modal__content__title">
+                                    <div class="modal__content__title__all">
+                                        <div class="modal__content__icon">
+
+                                        </div>
+                                        <h3>
+                                            Marcelo Dias
+                                            <small>
+                                                Paciente
+                                            </small>
+                                        </h3>
+                                    </div>
+                                    <div class="crm">
+                                        Particular
+                                    </div>
+                                </div>
+                                <button class="btn danger modal-out-d">
+                                    FINALIZAR CONSULTA
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <section id="telemedicine">
+
+                        <header class="telemedicine__header">
+                            <div class="telemedicine__header__icon">
+
+                            </div>
+                            <div class="telemedicine__header__title">
+                                <h2>
+                                    Marcelo Dias
+                                    <small>
+                                        Paciente
+                                    </small>
+                                </h2>
+                            </div>
+                            <div class="telemedicine__header__status">
+                                <div class="online"></div>
+                                <span>
+                                    Online
+                                </span>
+                            </div>
+                        </header>
+                        <div class="telemedicine__content">
+                            <a href="" class="back">
+                                <img src="views/img/p-back.svg" alt="">
+                            </a>
+                            <div class="video-full full"></div>
+                            <div class="video-mini">
+                            </div>
+                            <footer class="container-footer">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="views/img/p-copy.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="views/img/p-file.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="views/img/p-video.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="modal-tel">
+                                            <img src="views/img/p-call.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="finish">
+                                    <a href="" class="modal-in">
+                                        <img src="views/img/p-phone.svg" alt="">
+                                    </a>
+                                </div>
+                            </footer>
+                        </div>
+                    </section>
+
+
+                    <section id="diagnosis">
+                        <div class="action">
+                            <button class="btn success">
+                                Diagnosticar Paciente
+                            </button>
+                        </div>
+
+                        <div class="content">
+
+                            <header>
+                                <ul>
+                                    <li>
+                                        <button class="active item" data-view="exames">
+                                            Exames
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="item" data-view="prescricoes">
+                                            Prescrições
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="item" data-view="profissionais">
+                                            Profissionais
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="item" data-view="consultas">
+                                            Consultas
+                                        </button>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="content-all-itens">
+                                <section data-active="exames" class="content-sub exames" style="opacity: 1; display: block; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <ul>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Radiografia
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tomografia
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tumografia
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Holter
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section data-active="prescricoes" class="content-sub prescricoes">
+                                    <ul>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Radiografia 2
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tomografia 2
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tumografia 2
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Holter 2
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section data-active="profissionais" class="content-sub profissionais">
+                                    <ul>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Radiografia 3
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tomografia 3
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tumografia 3
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Holter 3
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section data-active="consultas" class="content-sub consultas">
+                                    <ul>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Radiografia 4
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tomografia 4
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Tumografia 4
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="views/img/rx.jpg" alt="">
+                                                <div class="icon">
+                                                    <img src="views/img/icon-rx.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <h4>
+                                                    Holter 4
+                                                    <small>
+                                                        10/11/2018
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+
+                        <section class="content-typs">
+                            <ul>
+                                <a href="#summary" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t1.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Resumo
+                                            </p>
+                                        </div>
+
+                                    </li>
+                                </a>
+                                <a href="#anamnese" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t1.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Anamnese
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#exame" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t1.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Exame Físico
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#diagnostico" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t1.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Diagnóstico
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#evolution" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t2.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Evolução
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#orcamento" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t3.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Orçamento
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#exames_procedimentos" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t4.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Exames e Procedimentos
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#prescricoes" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t4.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Prescrições
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#atestados" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t4.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Atestado
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#anexos" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t5.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Anexos
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#compartilhar" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t4.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Compartilhar Dados
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#anexos" class="" data-fancybox="atendimento">
+                                    <li>
+                                        <div class="icon">
+                                            <img src="views/img/t4.svg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Imagens e Anexos
+                                            </p>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="modals">
+                        <div class="modal" id="summary">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Patient Summary</h2>
+                                </div>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">28/Jul</div>
+                                        <div class="timeline-content">
+                                            <p><strong>Pontuário</strong></p>
+                                            <a href="">Clique pra ver</a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item timeline-ltd">
+                                        <div class="timeline-time">28/Jul</div>
+                                        <div class="timeline-content">
+                                            <p><strong>Pontuário</strong></p>
+                                            <a href="">Clique pra ver</a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">28/Jul</div>
+                                        <div class="timeline-content">
+                                            <p><strong>Pontuário</strong></p>
+                                            <a href="">Clique pra ver</a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item timeline-ltd">
+                                        <div class="timeline-time">28/Jul</div>
+                                        <div class="timeline-content">
+                                            <p><strong>Pontuário</strong></p>
+                                            <a href="">Clique pra ver</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="anamnese">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Anamnese</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Main Complaint:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">History:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Articular Problems or Rheumatism:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Kidney Problems:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Heart problems:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Breathing problems:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Gastric Problems:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Allergies:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Use of Medications:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Hepatitis:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            Yes
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            No
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Pregnancy:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            Yes
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            No
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Diabetes:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            Yes
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            No
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Healing Problems:</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            Yes
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="option-radio">
+                                                            No
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="exame">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Physical Exam</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Height:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Palpation:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Injuries:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Weight (kg):</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Heart Rate(bpm):</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Systolic Blood Pressure(mmHg):</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Diastolic Blood Pressure(mmHg):</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">General observations:</label>
+                                                <textarea name=""  cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="diagnostico">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Diagnostic hypothesis</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Diagnosis:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Comments:</label>
+                                                <textarea name=""  cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="evolution">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Evolution</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Evolution:</label>
+                                                <textarea name=""  cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="orcamento">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Budget</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <label for="">Procedure:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="">Value:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="" class="btn btn-gradient m-top">+</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Comments:</label>
+                                                <textarea name=""  cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="exames_procedimentos">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Exams and Procedures</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-5">
+                                                        <label for="">Date:</label>
+                                                        <input type="date" name="">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="">Exams Model:</label>
+                                                        <div class="select">
+                                                            <select name="" >
+                                                                <option value="">Model 1</option>
+                                                                <option value="">Model 2</option>
+                                                                <option value="">Model 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="" class="btn btn-gradient m-top">+</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Clinical Indication:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label for="">Exams:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="">Amount:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="prescricoes">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Prescriptions</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="option-radio">
+                                                    Special Control Receipt
+                                                    <input type="radio" name="radio">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-5">
+                                                        <label for="">Date:</label>
+                                                        <input type="date" name="">
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <label for="">Models:</label>
+                                                        <div class="select">
+                                                            <select name="" >
+                                                                <option value="">Model 1</option>
+                                                                <option value="">Model 2</option>
+                                                                <option value="">Model 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label for="">Medication:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="">Amount:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label for="">Posology:</label>
+                                                        <input type="text" name="">
+                                                    </div>
+                                                    <div class="col-md-3"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 offset-md-8">
+                                                <input type="submit" class="btn btn-gradient" value="SAVE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="atestados">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Attestations</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-5">
+                                                        <label for="">Date:</label>
+                                                        <input type="date" name="">
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <label for="">Models:</label>
+                                                        <div class="select">
+                                                            <select name="" >
+                                                                <option value="">Model 1</option>
+                                                                <option value="">Model 2</option>
+                                                                <option value="">Model 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Attestation:</label>
+                                                <textarea name=""  cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <a href="" class="btn btn-gradient">SAVE AS A MODEL</a>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="submit" class="btn btn-gradient" value="SAVE">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="anexos">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Images or Attachments</h2>
+                                </div>
+                                <div class="form">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form action="/upload-target" class="dropzone" id="file_ads">
+                                                <div class="dz-message">Select files from your computer or drag here
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-4 offset-md-8">
+                                            <input type="submit" class="btn btn-gradient" value="SAVE">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="compartilhar">
+                            <div class="modal-box">
+                                <div class="modal-title">
+                                    <h2>Share</h2>
+                                </div>
+                                <div class="form">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Doctor's Name:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Specialty:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Address:</label>
+                                                <input type="text" name="">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="">Your Password:</label>
+                                                <input type="password" name="">
+                                            </div>
+                                            <div class="col-md-6 offset-md-6">
+                                                <input type="submit" class="btn btn-gradient" value="SHARE">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal finish" id="finish">
+                            <div class="modal-box">
+                                <div class="modal-title__finish">
+                                    <h3>Do you want to finish?</h3>
+                                    <p>Duration of Service: <strong>00:45:39</strong></p>
+
+                                    <div class="consulta-medica__item">
+                                        <figure class="atendimento__photo">
+                                            <img alt="Dr. Guilherme Marques" src="views/img/hitchcock.jpg">
+                                        </figure>
+                                        <div class="atendimento__paciente">
+                                            <h3>Marcos Alves</h3>
+                                            <span>UNIMED</span>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-red">Finish Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+<!-- <script src="views/js/vendor/modernizr-3.6.0.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+<%- include includes/footer.ejs %>

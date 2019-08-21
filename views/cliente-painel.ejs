@@ -1,0 +1,314 @@
+<%- include includes/header-cliente.ejs %>
+
+<section class="box__panel cliente-painel">
+	<div class="container">
+		<div class="row mosaic">
+			<div class="col-md-3">
+				<div class="mosaic-item cards">
+					<p><strong>12</strong> Consultas Realizadas</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="mosaic-item cards">
+					<p><strong>5</strong> Exames Realizados</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="mosaic-item cards">
+					<p><strong>10</strong> Profissionais da Saúde</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="mosaic-item cards">
+					<p><strong>0</strong> Faltas</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="mosaic-item mh-form">
+					<h3><strong>Marcar</strong> Consulta ou exame</h3>
+					<form action="/pesquisa" method="POST" class="form">
+						<div class="row">
+							<div class="col-md-6 ">
+								<label class="option-radio">
+									Consulta	
+									<input type="radio" checked="checked" name="radio" value="MEDICO">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<label class="option-radio">
+									Exame
+									<input type="radio" name="radio" value="CLINICA">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="location" placeholder="Localização">
+							</div>
+							<div class="col-md-6">
+								<div class="select">
+									<select name="speciality">
+										<option selected disabled>Especialidade</option>
+										<option>Gastrologista</option>
+										<option>Cardiologista</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class=	"form-radio d-flex">
+										<div class="custom-control custom-radio">
+											<p for="compartilhar-com-paciente">Atendimento com <span class="tele">telemedicina</span> (vídeo-chat)</p>
+											<label class="switch">
+													<input type="checkbox" checked>
+													<span class="slider round"></span>
+												</label>
+										</div>
+									</div>
+							</div>
+							<div class="col-md-12 row-submit">
+								<input type="submit" class="btn btn-gradient" value="Pesquisar">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="mosaic-item">
+					<h3><strong>Indicar</strong> um médico</h3>
+					<form id="form-referral" class="form">
+						<div class="row">
+							<div class="col-md-6">
+								<input type="text" name="name" placeholder="Nome">
+							</div>
+							<div class="col-md-6">
+								<input type="email" name="email" placeholder="E-mail">
+							</div>
+							<div class="col-md-6">
+								<div class="select">
+									<select name="sexo">
+										<option selected disabled>Sexo</option>
+										<option>Masculino</option>
+										<option>Feminino</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="select">
+									<select name="speciality">
+										<option selected disabled>Especialidade</option>
+										<option>Gastrologist</option>
+										<option>Cardiologist</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<p class="obs">*Se o médico indicado aceitar o convite você ganhará desconto nas suas consultas e exames</p>
+							</div>
+							<div class="col-md-12 row-submit">
+								<input type="submit" class="btn btn-gradient" value="Enviar">
+							</div>
+						</div>
+					</form>
+					<script>
+						$(document).ready(function () {
+							$('#form-referral').on('submit', function (e) {
+								e.preventDefault()
+
+								$.ajax({
+									type: 'POST',
+									url: '/indicacao',
+									datatype: 'html',
+									contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+									data: $('#form-referral').serialize(),
+									success: function (result) {
+										alertify.notify(result, 'success', 5)
+										$('#form-referral')[0].reset()
+									},
+									error: function (xhr, status, error) {
+										alertify.notify(JSON.parse(xhr.responseText), 'error', 5)
+									},
+								})
+							})
+						})
+					</script>
+				</div>
+			</div>
+			<div class="col-md-12 atendimento-paciente contabilidade">
+				<div class="mosaic-item">
+					<div class="row">
+						<div class="col-md-4">
+							<h2 class="title-mosaic"><strong>Resultado</strong> de exames</h2>
+						</div>
+						<div class="col-md-8">
+							<form action="/" method="GET" id="pesquisa" class="form">
+								<div class="form-group relative d-flex">
+									<input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+									<div class="icons-search">
+										<a id="filterInput" href="#"><span><img src="/views/img/icone-form.png" alt="Icone form"></span></a>
+										<button type="submit"> <span><i class="fa fa-search"></i></span></button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="indices d-flex align-items-center">
+						<div class="nome item">
+							<p>Nome</p>
+						</div>
+						<div class="account item">
+							<p>Lugar</p>
+						</div>
+						<div class="agency item">
+							<p>Descrição</p>
+						</div>
+						<div class="cargo item">
+							<p>Data</p>
+						</div>
+						<div class="acao item">
+							<p>Ação</p>
+						</div>
+					</div>
+					<div class="info d-flex">
+						<div class="nome">
+							<p><span class="none">Nome: </span> Ultrassom</p>
+						</div>
+						<div class="convenio cpf">
+							<p><span class="none">Lugar: </span> Bogos</p>
+						</div>
+						<div class="data">
+							<p><span class="none">Descrição</span> Exame</p>
+						</div>
+						<div class="cargo">
+							<p><span class="none">Data: </span> 06/02/2019</p>
+						</div>
+						<div class="action">
+							<span class="none">Ação:</span>
+							<a class="ver-mais" id="verResultadoExame">Ver mais</a>
+						</div>
+					</div>
+					<div class="row addContaBancaria">
+						<a href="#" class="btn btn-gradient" id="addResultadoExame">Adicionar Exame</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 atendimento-paciente contabilidade">
+				<div class="mosaic-item">
+					<div class="row">
+						<div class="col-md-4">
+							<h2 class="title-mosaic">Atestados</h2>
+						</div>
+						<div class="col-md-8">
+							<form action="/" method="GET" id="pesquisa" class="form">
+								<div class="form-group relative d-flex">
+									<input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+									<div class="icons-search">
+										<a id="filterInput" href="#"><span><img src="/views/img/icone-form.png" alt="Icone form"></span></a>
+										<button type="submit"> <span><i class="fa fa-search"></i></span></button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="indices d-flex align-items-center">
+						<div class="nome item">
+							<p>Nome</p>
+						</div>
+						<div class="account item">
+							<p>Médico</p>
+						</div>
+						<div class="agency item">
+							<p>Descrição</p>
+						</div>
+						<div class="cargo item">
+							<p>Data</p>
+						</div>
+						<div class="acao item">
+							<p>Ação</p>
+						</div>
+					</div>
+					<div class="info d-flex">
+						<div class="nome">
+							<p><span class="none">Nome: </span> Atestado CID</p>
+						</div>
+						<div class="convenio cpf">
+							<p><span class="none">Médico: </span> Bogos</p>
+						</div>
+						<div class="data">
+							<p><span class="none">Descrição</span> Atestado</p>
+						</div>
+						<div class="cargo">
+							<p><span class="none">Data: </span> 06/02/2019</p>
+						</div>
+						<div class="action">
+							<span class="none">Ação:</span>
+							<a class="ver-mais" id="verAtestado">Ver mais</a>
+						</div>
+					</div>
+					<div class="row addContaBancaria">
+						<a href="#" class="btn btn-gradient" id="addAtestado">Adicionar atestado</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 atendimento-paciente contabilidade">
+				<div class="mosaic-item">
+					<div class="row">
+						<div class="col-md-4">
+							<h2 class="title-mosaic">Prescrições</h2>
+						</div>
+						<div class="col-md-8">
+							<form action="/" method="GET" id="pesquisa" class="form">
+								<div class="form-group relative d-flex">
+									<input type="text" id="pesquisa" placeholder="Faça uma pesquisa">
+									<div class="icons-search">
+										<a id="filterInput" href="#"><span><img src="/views/img/icone-form.png" alt="Icone form"></span></a>
+										<button type="submit"> <span><i class="fa fa-search"></i></span></button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="indices d-flex align-items-center">
+						<div class="nome item">
+							<p>Medicamento</p>
+						</div>
+						<div class="account item">
+							<p>Médico</p>
+						</div>
+						<div class="agency item">
+							<p>Descrição</p>
+						</div>
+						<div class="cargo item">
+							<p>Data</p>
+						</div>
+						<div class="acao item">
+							<p>Ação</p>
+						</div>
+					</div>
+					<div class="info d-flex">
+						<div class="nome">
+							<p><span class="none">Medicamento: </span> Atenolol</p>
+						</div>
+						<div class="convenio cpf">
+							<p><span class="none">Médico: </span> Bogos</p>
+						</div>
+						<div class="data">
+							<p><span class="none">Descrição</span> Medicamento</p>
+						</div>
+						<div class="cargo">
+							<p><span class="none">Data: </span> 06/02/2019</p>
+						</div>
+						<div class="action">
+							<span class="none">Ação:</span>
+							<a class="ver-mais" id="verPrescricao">Ver mais</a>
+						</div>
+					</div>
+					<div class="row addContaBancaria">
+						<a href="#" class="btn btn-gradient" id="addPrescricao">Adicionar prescrição</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<%- include includes/footer.ejs %>

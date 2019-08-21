@@ -1,0 +1,332 @@
+//////////////////////////////////////////////
+// Import everything to generate css module //
+//////////////////////////////////////////////
+@import "helpers/settings",
+        "helpers/mixins",
+        "helpers/placeholder";
+
+// BOOTSTRAP
+@import	"libs/bootstrap-reboot",
+        "libs/bootstrap-grid";
+
+// ASSETS
+@import	"assets/fonts",
+				"assets/layout",
+        "assets/main",
+        "assets/responsive",
+        "assets/modal";
+    
+// LIBS
+@import "libs/fancybox",
+        "libs/carousel",
+				"libs/dropzone",
+				"libs/smoothness",
+				"libs/vanillaCalendar",
+				"libs/selectize";
+
+                                .btndelete{
+background: #45c8e3;
+    background: -moz-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #45c8e3), color-stop(100%, #01e9b1));
+    background: -webkit-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+    background: -o-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+    background: -ms-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+    background: linear-gradient(to right, #e94b63 0%, #e94b63 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$first-color", endColorstr="$second-color",GradientType=1 );
+    color: #fff;
+}
+
+
+
+/* Classes de Geocácio */
+.cor-verde{
+    background: #01E9B5!important;
+    }
+    
+    .cor-verde-hover:hover{
+    background: #01E9B5!important;
+    }
+    
+    .right-15{
+    padding-right: 15px;
+    }
+    
+    .right-left-20{
+    padding-right: 20px;
+    padding-left: 20px;
+    }
+    
+    .padding-botao{
+    padding: 10px 15px!important;
+    }
+    
+    .no-padding{
+    padding: 0;
+    }
+    
+    .question:after{
+    border-top: 24px solid #01E9B5!important;
+    }
+    
+    .fundo-cinza{
+    background-color: rgba(65,104,136,0.05) !important;
+    }
+    
+    .c-historico .mosaic-item.cards p{
+    font-size: 13px;
+    }
+    
+    .c-historico .mosaic-item.cards .number{
+    font-size: 16px;
+    }
+    .box-checkbox .switch{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    top: 0;
+    }
+    
+    .box-checkbox{
+    margin-bottom: 20px;
+    }
+    .box-checkbox p{
+        margin: 0;
+        color: #ccc;
+        font-size: 13px;
+        padding: 10px 0;
+    }
+    .historico .separator p{
+        font-size: 16px;
+    }
+
+    .input-white{
+        border: 1px solid rgba(65,104,136,0.05) !important;
+        background-color: transparent!;
+    }
+
+    .no-shadow{
+        box-shadow: none!important;
+    }
+
+    .medico-detalhes p{
+        line-height: 30px;
+    }
+
+    #conennt-quest{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #conennt-quest .especifico{
+        display: none;
+    }
+
+    #conennt-quest .especifico .icons-search #filterInput{
+        margin-right: 15px;
+    }
+
+    #conennt-quest .especifico .icons-search{
+        position: absolute;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #conennt-quest .especifico .mosaic-item{
+        padding: 0
+    }
+
+    #conennt-quest .especifico .fa-search:before{
+        content: "\f002";
+    }
+
+    #conennt-quest .especifico .icons-search button{
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        box-shadow: none;
+        color: #8897AA;
+    }
+
+    #conennt-quest #pesquisa{
+        margin-bottom: 0;
+    }
+
+    .notification-box.new-notification-box{
+        top: 30px;
+        left: 80px;
+        max-width: 300px;
+    }
+
+    .bell-notification{
+        cursor: pointer;
+    }
+
+    .notification-box.new-notification-box .notification-close{
+        background: none;
+        background-color: #01E9B5;
+    }
+
+    .img-doctor{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .custom-arquivo{
+        background-color: #01e9b1!important;
+        color: #fff!important;
+        margin-bottom: 0!important;
+        min-height: auto!important;
+        padding: 10px 20px!important;
+    }
+
+    .height-full{
+        height: 100%;
+    }
+
+    .no-margin{
+        margin: 0!important;
+    }
+
+    .fancybox-controls{
+        display: none;
+    }
+    .modal.edit-medicamento .fancybox-close-small{
+        left: 0;
+        margin: auto;
+    }
+
+    .modal.edit-medicamento .fancybox-close-small:after{
+        width: auto;
+        height: auto;
+        right: 0;
+        padding: 15px;
+        font-size: 40px;
+    }
+
+    .modal.edit-medicamento{
+        background-color:transparent;
+    }
+    .modal.edit-medicamento .modal-container{
+        background-color:#fff;
+        border-radius: 5px;
+    }
+
+    .modal.edit-medicamento .modal-container .modal-body{
+        margin-top: 50px;
+        padding: 20px 0;
+    }
+
+    .modal.edit-medicamento .modal-container .modal-footer{
+        text-align: right;
+        padding-bottom: 20px;
+    }
+    .modal.edit-medicamento .modal-container .btn-green{
+        background-color: #01e9b1;
+        color: #fff;
+    }
+
+    .modal.edit-medicamento .modal-container .btn{
+        padding: 10px 50px;
+    }
+
+    .notification-cart {
+        padding: 10px;
+        border-radius: 4px;
+        position: relative;
+        margin-bottom: 15px;
+        height: 180px;
+        overflow-y: hidden;
+        overflow: auto;
+    }
+
+    .notification-cart .notification-cart__content{
+        margin-bottom: 20px;
+    }
+
+    .notification-box.new-notification-box .notification-close {
+        background: none;
+        background-color: #01E9B5;
+        text-align: center;
+        display: block;
+    }
+
+    #btn_close{
+        display: block!important;
+        text-align: center;
+    }
+
+    .medicoOnline{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-weight: bold;
+        font-size: 12px;
+        background: #01e9b1;
+    }
+
+    .modNovoUsuario p{
+        font-size: 15px!important;
+    }
+
+    #telemedicine, #diagnosis{
+        width: 100%!important;
+        max-width: 100%!important;
+        margin-left: 0!important;
+    }
+
+    /* #header_painel{
+        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    } */
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #01E9B5; 
+      }
+
+    @media(max-width: 768px){
+
+        .medico-resultado .btn-searchInner{
+            width: 100%;
+            border-radius: 5px;
+            height: auto;
+            position: initial;
+            margin: 15px;
+        }
+
+        .medico-resultado .form-search{
+            border-radius: 5px!important;
+        }
+
+    }
+
+    @media (min-width: 768px){
+        .mt50{
+            margin-top: 80px;
+        }
+
+        .medico-resultado .select{
+            margin-bottom: 15px!important;
+        }
+
+        .medico-resultado .result-list__dados .address{
+            margin-bottom: 20px;
+        }
+    }
+
+    

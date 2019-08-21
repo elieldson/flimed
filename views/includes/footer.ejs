@@ -1,0 +1,81 @@
+</section>
+
+<!-- Modal notifications -->
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-12" style="position: relative">
+
+			<div class="notification-box new-notification-box">
+				<div class="notification-close" id="notification_close">x</div>
+				<h5>Notifications</h5>
+
+				<div class="notification-cart">
+					<figure class="notification-cart__fig">
+						<img src="/views/img/logo-painel-cliente.svg" alt="Logo Notification">
+					</figure>
+					<div class="notification-cart__content">
+						<h6>Notification 1</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi, id fugiat ea earum
+							facilis!</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div> -->
+
+<!-- End Modal -->
+<footer class="footer">
+	<div class="footer-top">
+		<div class="container">
+			<figure class="footer-logo">
+				<a href=""><img src="/views/home/assets/images/logotipo.svg" alt="Logo Flimed"></a>
+			</figure>
+			<div class="footer-phones">
+				<a href="">(85) 99977.1436</a>
+				<a href="">(85) 98106.2111</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>© Flimed, Todos os Direitos Reservados</p>
+	</div>
+</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+<script src="views/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script src="/views/js/plugins.js"></script>
+<script src="/views/js/main.js"></script>
+<script src="/views/js/modal.js?v=1235f"></script>
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+
+
+<% if(message) { %>
+<script>
+	const msg = JSON.parse('<%- message %>')
+	if (msg !== 'Sucesso!')
+		alertify.notify(msg, 'error', 5)
+	else
+		alertify.notify(msg, 'success', 5)
+</script>
+<% } %>
+
+<script>
+	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>

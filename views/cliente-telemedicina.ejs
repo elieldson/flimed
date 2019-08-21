@@ -1,0 +1,168 @@
+<%- include includes/header-cliente.ejs %>
+<link rel="stylesheet" href="views/css/new-style.css" />
+<section class="box__panel medico-resultado">
+    <div class="container">
+        <div class="row search-inner">
+            <div class="col-12">
+                <div class="modal-all">
+                    <div class="bg-modal modal-out"></div>
+                    <section class="modal-container complaint">
+                        <header class="modal__header">
+                            <div>
+                                Escreva sua queixa
+                                <div class="duration">
+                                    Uma pequena descrição
+                                </div>
+                            </div>
+                        </header>
+                        <div class="modal__content">
+
+                            <textarea name="" id="" rows="3" placeholder="Queixa principal"></textarea>
+
+                            <button class="btn success modal-out">
+                                Discar para o Médico
+                            </button>
+                        </div>
+                    </section>
+                    <section class="modal-container pay">
+                        <header class="modal__header">
+                            <div>
+                                Consulta por telemedicina
+                                <div class="duration">
+                                    CUSTO TOTAL DA CONSULTA:
+                                    <span>
+                                        R$ 200,00 REAIS
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="modal__content">
+                            <div class="modal__content__title">
+                                <div class="modal__content__title__all">
+                                    <div class="modal__content__icon">
+                                        <img src="./img/p-icon.svg" alt="">
+                                    </div>
+                                    <h3>
+                                        Dr.Marco Antônio
+                                        <small>
+                                            Cardiologista
+                                        </small>
+                                    </h3>
+                                </div>
+                                <div class="crm">
+                                    CRM: 31323
+                                </div>
+                            </div>
+                            <div class="btn-all">
+                                <button class="btn success modal-out">
+                                    PAGAR
+                                </button>
+                                <button class="btn danger modal-out">
+                                    CANCELAR
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="modal-container finish">
+                        <header class="modal__header">
+                            <div>
+                                Sua consulta foi finalizada
+                                <div class="duration">
+                                    Duração do atendimento:
+                                    <span>
+                                        01:30:23
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="modal__content">
+                            <div class="modal__content__title">
+                                <div class="modal__content__title__all">
+                                    <div class="modal__content__icon">
+                                        <img src="./img/p-icon.svg" alt="">
+                                    </div>
+                                    <h3>
+                                        Dr.Marco Antônio
+                                        <small>
+                                            Cardiologista
+                                        </small>
+                                    </h3>
+                                </div>
+                                <div class="crm">
+                                    CRM: 31323
+                                </div>
+                            </div>
+                            <button class="btn success modal-out">
+                                VOLTAR PARA O PAINEL
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+
+                <section id="telemedicine">
+
+                    <header class="telemedicine__header">
+                        <div class="telemedicine__header__icon">
+                            <img src="./img/p-icon.svg" alt="">
+                        </div>
+                        <div class="telemedicine__header__title">
+                            <h2>
+                                Dr.Marco Antônio
+                                <small>
+                                    Cardiologista
+                                </small>
+                            </h2>
+                        </div>
+                        <div class="telemedicine__header__status">
+                            <div class="online"></div>
+                            <span>
+                                Online
+                            </span>
+                        </div>
+                    </header>
+                    <div class="telemedicine__content">
+                        <a href="" class="back">
+                            <img src="./img/p-back.svg" alt="">
+                        </a>
+                        <div class="video-full full"></div>
+                        <div class="video-mini">
+                        </div>
+                        <footer class="container-footer">
+                            <ul>
+                                <li>
+                                    <a href="" class="modal-pay">
+                                        <img src="./img/p-copy.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="modal-comp">
+                                        <img src="./img/p-file.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="./img/p-video.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="./img/p-call.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="finish">
+                                <a href="" class="modal-in">
+                                    <img src="./img/p-phone.svg" alt="">
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include includes/footer.ejs %>
