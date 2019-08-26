@@ -1,332 +1,509 @@
 //////////////////////////////////////////////
 // Import everything to generate css module //
 //////////////////////////////////////////////
-@import "helpers/settings",
-        "helpers/mixins",
-        "helpers/placeholder";
+@import "helpers/settings", "helpers/mixins", "helpers/placeholder";
 
 // BOOTSTRAP
-@import	"libs/bootstrap-reboot",
-        "libs/bootstrap-grid";
+@import "libs/bootstrap-reboot", "libs/bootstrap-grid";
 
 // ASSETS
-@import	"assets/fonts",
-				"assets/layout",
-        "assets/main",
-        "assets/responsive",
-        "assets/modal";
-    
-// LIBS
-@import "libs/fancybox",
-        "libs/carousel",
-				"libs/dropzone",
-				"libs/smoothness",
-				"libs/vanillaCalendar",
-				"libs/selectize";
+@import "assets/fonts", "assets/layout", "assets/main", "assets/responsive",
+  "assets/modal";
 
-                                .btndelete{
-background: #45c8e3;
-    background: -moz-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #45c8e3), color-stop(100%, #01e9b1));
-    background: -webkit-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
-    background: -o-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
-    background: -ms-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
-    background: linear-gradient(to right, #e94b63 0%, #e94b63 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$first-color", endColorstr="$second-color",GradientType=1 );
-    color: #fff;
+// LIBS
+@import "libs/fancybox", "libs/carousel", "libs/dropzone", "libs/smoothness",
+  "libs/vanillaCalendar", "libs/selectize";
+
+.btndelete {
+  background: #45c8e3;
+  background: -moz-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, #45c8e3),
+    color-stop(100%, #01e9b1)
+  );
+  background: -webkit-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+  background: -o-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+  background: -ms-linear-gradient(left, #45c8e3 0%, #01e9b1 100%);
+  background: linear-gradient(to right, #e94b63 0%, #e94b63 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$first-color", endColorstr="$second-color",GradientType=1 );
+  color: #fff;
 }
 
-
-
 /* Classes de Geocácio */
-.cor-verde{
-    background: #01E9B5!important;
-    }
-    
-    .cor-verde-hover:hover{
-    background: #01E9B5!important;
-    }
-    
-    .right-15{
-    padding-right: 15px;
-    }
-    
-    .right-left-20{
-    padding-right: 20px;
-    padding-left: 20px;
-    }
-    
-    .padding-botao{
-    padding: 10px 15px!important;
-    }
-    
-    .no-padding{
-    padding: 0;
-    }
-    
-    .question:after{
-    border-top: 24px solid #01E9B5!important;
-    }
-    
-    .fundo-cinza{
-    background-color: rgba(65,104,136,0.05) !important;
-    }
-    
-    .c-historico .mosaic-item.cards p{
-    font-size: 13px;
-    }
-    
-    .c-historico .mosaic-item.cards .number{
-    font-size: 16px;
-    }
-    .box-checkbox .switch{
-    position: absolute;
-    right: 15px;
-    bottom: 0;
-    top: 0;
-    }
-    
-    .box-checkbox{
-    margin-bottom: 20px;
-    }
-    .box-checkbox p{
-        margin: 0;
-        color: #ccc;
-        font-size: 13px;
-        padding: 10px 0;
-    }
-    .historico .separator p{
-        font-size: 16px;
-    }
+.cor-verde {
+  background: #01e9b5 !important;
+}
 
-    .input-white{
-        border: 1px solid rgba(65,104,136,0.05) !important;
-        background-color: transparent!;
-    }
+.cor-verde-hover:hover {
+  background: #01e9b5 !important;
+}
 
-    .no-shadow{
-        box-shadow: none!important;
-    }
+.right-15 {
+  padding-right: 15px;
+}
 
-    .medico-detalhes p{
-        line-height: 30px;
-    }
+.right-left-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
-    #conennt-quest{
-        width: 100%;
-        margin-bottom: 20px;
-    }
+.padding-botao {
+  padding: 10px 15px !important;
+}
 
-    #conennt-quest .especifico{
-        display: none;
-    }
+.no-padding {
+  padding: 0;
+}
 
-    #conennt-quest .especifico .icons-search #filterInput{
-        margin-right: 15px;
-    }
+.question:after {
+  border-top: 24px solid #01e9b5 !important;
+}
 
-    #conennt-quest .especifico .icons-search{
-        position: absolute;
-        right: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+.fundo-cinza {
+  background-color: rgba(65, 104, 136, 0.05) !important;
+}
 
-    #conennt-quest .especifico .mosaic-item{
-        padding: 0
-    }
+.c-historico .mosaic-item.cards p {
+  font-size: 13px;
+}
 
-    #conennt-quest .especifico .fa-search:before{
-        content: "\f002";
-    }
+.c-historico .mosaic-item.cards .number {
+  font-size: 16px;
+}
+.box-checkbox .switch {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  top: 0;
+}
 
-    #conennt-quest .especifico .icons-search button{
-        border: 0;
-        background-color: transparent;
-        cursor: pointer;
-        box-shadow: none;
-        color: #8897AA;
-    }
+.box-checkbox {
+  margin-bottom: 20px;
+}
+.box-checkbox p {
+  margin: 0;
+  color: #ccc;
+  font-size: 13px;
+  padding: 10px 0;
+}
+.historico .separator p {
+  font-size: 16px;
+}
 
-    #conennt-quest #pesquisa{
-        margin-bottom: 0;
-    }
+.input-white {
+  border: 1px solid rgba(65, 104, 136, 0.05) !important;
+  background-color: transparent;
+}
 
-    .notification-box.new-notification-box{
-        top: 30px;
-        left: 80px;
-        max-width: 300px;
-    }
+.no-shadow {
+  box-shadow: none !important;
+}
 
-    .bell-notification{
-        cursor: pointer;
-    }
+.medico-detalhes p {
+  line-height: 30px;
+}
 
-    .notification-box.new-notification-box .notification-close{
-        background: none;
-        background-color: #01E9B5;
-    }
+#conennt-quest {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-    .img-doctor{
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+#conennt-quest .especifico {
+  display: none;
+}
 
-    .custom-arquivo{
-        background-color: #01e9b1!important;
-        color: #fff!important;
-        margin-bottom: 0!important;
-        min-height: auto!important;
-        padding: 10px 20px!important;
-    }
+#conennt-quest .especifico .icons-search #filterInput {
+  margin-right: 15px;
+}
 
-    .height-full{
-        height: 100%;
-    }
+#conennt-quest .especifico .icons-search {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-    .no-margin{
-        margin: 0!important;
-    }
+#conennt-quest .especifico .mosaic-item {
+  padding: 0;
+}
 
-    .fancybox-controls{
-        display: none;
-    }
-    .modal.edit-medicamento .fancybox-close-small{
-        left: 0;
-        margin: auto;
-    }
+#conennt-quest .especifico .fa-search:before {
+  content: "\f002";
+}
 
-    .modal.edit-medicamento .fancybox-close-small:after{
-        width: auto;
-        height: auto;
-        right: 0;
-        padding: 15px;
-        font-size: 40px;
-    }
+#conennt-quest .especifico .icons-search button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  color: #8897aa;
+}
 
-    .modal.edit-medicamento{
-        background-color:transparent;
-    }
-    .modal.edit-medicamento .modal-container{
-        background-color:#fff;
-        border-radius: 5px;
-    }
+#conennt-quest #pesquisa {
+  margin-bottom: 0;
+}
 
-    .modal.edit-medicamento .modal-container .modal-body{
-        margin-top: 50px;
-        padding: 20px 0;
-    }
+.notification-box.new-notification-box {
+  top: 30px;
+  left: 80px;
+  max-width: 300px;
+}
 
-    .modal.edit-medicamento .modal-container .modal-footer{
-        text-align: right;
-        padding-bottom: 20px;
-    }
-    .modal.edit-medicamento .modal-container .btn-green{
-        background-color: #01e9b1;
-        color: #fff;
-    }
+.bell-notification {
+  cursor: pointer;
+}
 
-    .modal.edit-medicamento .modal-container .btn{
-        padding: 10px 50px;
-    }
+.notification-box.new-notification-box .notification-close {
+  background: none;
+  background-color: #01e9b5;
+}
 
-    .notification-cart {
-        padding: 10px;
-        border-radius: 4px;
-        position: relative;
-        margin-bottom: 15px;
-        height: 180px;
-        overflow-y: hidden;
-        overflow: auto;
-    }
+.img-doctor {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-    .notification-cart .notification-cart__content{
-        margin-bottom: 20px;
-    }
+.custom-arquivo {
+  background-color: #01e9b1 !important;
+  color: #fff !important;
+  margin-bottom: 0 !important;
+  min-height: auto !important;
+  padding: 10px 20px !important;
+}
 
-    .notification-box.new-notification-box .notification-close {
-        background: none;
-        background-color: #01E9B5;
-        text-align: center;
-        display: block;
-    }
+.height-full {
+  height: 100%;
+}
 
-    #btn_close{
-        display: block!important;
-        text-align: center;
-    }
+.no-margin {
+  margin: 0 !important;
+}
 
-    .medicoOnline{
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        color: #FFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-weight: bold;
-        font-size: 12px;
-        background: #01e9b1;
-    }
+.fancybox-controls {
+  display: none;
+}
+.modal.edit-medicamento .fancybox-close-small {
+  left: 0;
+  margin: auto;
+}
 
-    .modNovoUsuario p{
-        font-size: 15px!important;
-    }
+.modal.edit-medicamento .fancybox-close-small:after {
+  width: auto;
+  height: auto;
+  right: 0;
+  padding: 15px;
+  font-size: 40px;
+}
 
-    #telemedicine, #diagnosis{
-        width: 100%!important;
-        max-width: 100%!important;
-        margin-left: 0!important;
-    }
+.modal.edit-medicamento {
+  background-color: transparent;
+}
+.modal.edit-medicamento .modal-container {
+  background-color: #fff;
+  border-radius: 5px;
+}
 
-    /* #header_painel{
+.modal.edit-medicamento .modal-container .modal-body {
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+.modal.edit-medicamento .modal-container .modal-footer {
+  text-align: right;
+  padding-bottom: 20px;
+}
+.modal.edit-medicamento .modal-container .btn-green {
+  background-color: #01e9b1;
+  color: #fff;
+}
+
+.modal.edit-medicamento .modal-container .btn {
+  padding: 10px 50px;
+}
+
+.notification-cart {
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 15px;
+  height: 180px;
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+.notification-cart .notification-cart__content {
+  margin-bottom: 20px;
+}
+
+.notification-box.new-notification-box .notification-close {
+  background: none;
+  background-color: #01e9b5;
+  text-align: center;
+  display: block;
+}
+
+#btn_close {
+  display: block !important;
+  text-align: center;
+}
+
+.medicoOnline {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 12px;
+  background: #01e9b1;
+}
+
+.modNovoUsuario p {
+  font-size: 15px !important;
+}
+
+#telemedicine,
+#diagnosis {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.timeline-point {
+  height: 100%;
+  display: flex;
+}
+.timeline-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  .timeline-headling {
+    height: 80px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .timeline-body {
+    width: 100%;
+    p {
+      margin-bottom: 2px;
+    }
+  }
+  .btn-timeline {
+    width: 100px;
+  }
+}
+
+.btn-timeline {
+  background-color: #01e9b5;
+  border-color: #01e9b5;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  margin: 0;
+}
+.btn-timeline.danger {
+  background-color: red;
+}
+.line-item {
+  margin-bottom: 20px;
+}
+
+.btn-sm-timeline {
+  font-size: 14px !important;
+  padding: 12px !important;
+  margin-top: 0 !important;
+}
+
+.limeline-content {
+  width: 100%;
+  padding-left: 20px;
+  .timeline-header {
+    width: 100%;
+  }
+  .point-date {
+    font-size: 40px;
+  }
+  .point-author {
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 30px;
+  }
+}
+
+.point-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  margin-top: 22px;
+  &:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    display: block;
+    margin-top: -5px;
+    margin-left: -5px;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  border: 0;
+  background-color: #eceff3;
+  color: #8897aa;
+  padding-left: 30px !important;
+  padding-top: 0px !important;
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder {
+    color: #8897aa;
+    padding-left: 30px !important;
+  }
+}
+
+.form-textarea.input {
+  padding-bottom: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+.btn-circle {
+  display: block;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.btn-radius {
+  margin-top: 0 !important;
+  width: 120px !important;
+  border-radius: 10px !important;
+  display: inline-block !important;
+  padding: 10px 15px !important;
+  font-size: 15px !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  margin-right: 5px !important;
+}
+
+.btn-radius.active {
+  background-color: #01e9b1 !important;
+  color: #fff !important;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 60px;
+  height: 35px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 36px;
+  background-color: #eceff3;
+  transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+  content: "";
+  display: block;
+  width: 36px;
+  margin: 0px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 22px;
+  border: 2px solid #ccc;
+  border-radius: 36px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background-color: #49e845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label,
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  border-color: #49e845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  right: 0px;
+}
+.shared {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.shared-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #header_painel{
         overflow: auto;
         overflow-y: scroll;
         overflow-x: hidden;
     } */
 
-    ::-webkit-scrollbar{
-        width: 10px;
-    }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-    ::-webkit-scrollbar-thumb {
-        background: #01E9B5; 
-      }
+::-webkit-scrollbar-thumb {
+  background: #01e9b5;
+}
 
-    @media(max-width: 768px){
+@media (max-width: 768px) {
+  .medico-resultado .btn-searchInner {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+    position: initial;
+    margin: 15px;
+  }
 
-        .medico-resultado .btn-searchInner{
-            width: 100%;
-            border-radius: 5px;
-            height: auto;
-            position: initial;
-            margin: 15px;
-        }
+  .medico-resultado .form-search {
+    border-radius: 5px !important;
+  }
+}
 
-        .medico-resultado .form-search{
-            border-radius: 5px!important;
-        }
+@media (min-width: 768px) {
+  .mt50 {
+    margin-top: 80px;
+  }
 
-    }
+  .medico-resultado .select {
+    margin-bottom: 15px !important;
+  }
 
-    @media (min-width: 768px){
-        .mt50{
-            margin-top: 80px;
-        }
-
-        .medico-resultado .select{
-            margin-bottom: 15px!important;
-        }
-
-        .medico-resultado .result-list__dados .address{
-            margin-bottom: 20px;
-        }
-    }
-
-    
+  .medico-resultado .result-list__dados .address {
+    margin-bottom: 20px;
+  }
+}
