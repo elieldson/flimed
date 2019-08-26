@@ -751,13 +751,13 @@ module.exports = app => {
     }
 
     const viewDoctorTelemedicina = async (req, res) => {
-        await User.findOne({ _id: req.session.user._id }).then(user => {
+       // await User.findOne({ _id: req.session.user._id }).then(user => {
             res.status(200).render('medico-telemedicina',{
                 page: 'Telemedicina',
-                user,
+                user: null,
                 message: null
             })
-        }).catch(_ => res.status(500).render('500'))
+        // }).catch(_ => res.status(500).render('500'))
     }
 
     return { 
