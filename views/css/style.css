@@ -13342,6 +13342,8 @@ body .ui-tooltip {
 }
 .timeline-item .timeline-body p {
   margin-bottom: 2px;
+  color: #8897aa;
+  font-weight: normal;
 }
 .timeline-item .btn-timeline {
   width: 100px;
@@ -13409,12 +13411,9 @@ body .ui-tooltip {
   border: 0;
   background-color: #eceff3;
   color: #8897aa;
-  padding-left: 30px !important;
-  padding-top: 0px !important;
 }
 .form-textarea::-webkit-input-placeholder, .form-textarea::-moz-placeholder {
   color: #8897aa;
-  padding-left: 30px !important;
 }
 
 .form-textarea.input {
@@ -13470,7 +13469,6 @@ body .ui-tooltip {
   height: 36px;
   padding: 0;
   line-height: 36px;
-  border: 2px solid #ccc;
   border-radius: 36px;
   background-color: #eceff3;
   transition: background-color 0.3s ease-in;
@@ -13481,27 +13479,29 @@ body .ui-tooltip {
   display: block;
   width: 36px;
   margin: 0px;
-  background: #ffffff;
+  background: rgba(65, 104, 136, 0.2);
   position: absolute;
   top: 0;
   bottom: 0;
   right: 22px;
-  border: 2px solid #ccc;
+  border: 0;
   border-radius: 36px;
   transition: all 0.3s ease-in 0s;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label {
-  background-color: #49e845;
+  background-color: #01e9b1;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label,
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-  border-color: #49e845;
+  border-color: #01e9b1;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
   right: 0px;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 .shared {
@@ -13543,6 +13543,25 @@ body .ui-tooltip {
     border-radius: 5px !important;
   }
 }
+.fancybox-enabled .btn-fancybox {
+  position: fixed;
+  top: 50%;
+  z-index: 9999999;
+  background-color: #01e9b1;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.fancybox-enabled .btn-fancybox.left {
+  left: 10%;
+}
+
+.fancybox-enabled .btn-fancybox.right {
+  right: 10%;
+}
+
 @media (min-width: 768px) {
   .mt50 {
     margin-top: 80px;

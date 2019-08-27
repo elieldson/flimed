@@ -606,6 +606,8 @@
                     </section>
 
                     <section class="modals">
+                            <button class="btn-fancybox left" data-item="left"><</button>
+                            <button class="btn-fancybox right" data-item="right">></button>
                         <div class="modal" id="summary">
                             <div class="modal-box">
                                 <div class="modal-title">
@@ -637,6 +639,7 @@
                                             </div><!-- timeline headling-->
                                             <div class="timeline-body">
                                                 <p>Atesto para os devidos fins a pedido do interessado que #nome_paciente, portador do documento de identidade #rg_paciente, foi submetido à consulta médica nesta data.</p>
+                                                <br /> 
                                                 <p>Em decorrência, deverá permanecer afastado de suas atividades laborativas por um período de _______ dias a partir desta data.</p>
                                             </div><!-- timeline body-->
                                         </div><!-- timeline item-->
@@ -657,51 +660,6 @@
                                     </div><!-- timeline content-->
                                 </div><!-- timeline point-->
 
-                                <div class="timeline-point">
-                                        <div class="point-line"></div>
-                                        <div class="limeline-content">
-                                            <div class="timeline-header">
-                                                <span class="point-date">24/06/18</span>
-                                                <span class="point-author">por: Dr. Pedro Henrique</span>
-                                            </div><!-- lime header -->
-                                            <div class="timeline-item">
-                                                <div class="timeline-headling">
-                                                    <h2 class="headline">Anamnese</h2>
-                                                    <a href="#" class="btn btn-timeline">Imprimir</a>
-                                                </div><!-- timeline headling-->
-                                                <div class="timeline-body">
-                                                    <p>Queixa principal e duração:</p>
-                                                    <p>Exemplo da queixa</p>
-                                                </div><!-- timeline body-->
-                                            </div><!-- timeline item-->
-    
-    
-                                            <div class="timeline-item">
-                                                <div class="timeline-headling">
-                                                    <h2 class="headline">Afestados</h2>
-                                                    <a href="#" class="btn btn-timeline">Imprimir</a>
-                                                </div><!-- timeline headling-->
-                                                <div class="timeline-body">
-                                                    <p>Atesto para os devidos fins a pedido do interessado que #nome_paciente, portador do documento de identidade #rg_paciente, foi submetido à consulta médica nesta data.</p>
-                                                    <p>Em decorrência, deverá permanecer afastado de suas atividades laborativas por um período de _______ dias a partir desta data.</p>
-                                                </div><!-- timeline body-->
-                                            </div><!-- timeline item-->
-    
-                                            <div class="timeline-item">
-                                                <div class="timeline-headling">
-                                                    <h2 class="headline">Exames</h2>
-                                                    <a href="#" class="btn btn-timeline">Imprimir</a>
-                                                </div><!-- timeline headling-->
-                                                <div class="timeline-body">
-                                                    <p>TOMOGRAFIA</p>
-                                                    <p>ULTRASSOM</p>
-                                                </div><!-- timeline body-->
-                                            </div><!-- timeline item-->
-    
-    
-    
-                                        </div><!-- timeline content-->
-                                    </div><!-- timeline point-->
                                 
                             </div>
                         </div>
@@ -1104,3 +1062,17 @@
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
 
 <%- include includes/footer.ejs %>
+
+<script>
+    $(function() {
+        let $btnFancyPrev = $('.btn-fancybox.left');
+        let $btnFancyNext = $('.btn-fancybox.right');
+
+        $btnFancyNext.on('click', function() {
+            $('.fancybox-button--right').click();
+        })
+        $btnFancyPrev.on('click', function() {
+            $('.fancybox-button--left').click();
+        })
+    })
+</script>
