@@ -13562,6 +13562,39 @@ body .ui-tooltip {
   right: 10%;
 }
 
+@media (max-width: 460px) {
+  .timeline-item .timeline-headling {
+    height: 100px;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .timeline-item .timeline-headling .btn-timeline {
+    margin-top: 0;
+  }
+
+  .limeline-content .timeline-header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .limeline-content .point-author {
+    margin-left: 0;
+  }
+
+  .shared-text p {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+
+  .form-textarea.input {
+    margin-bottom: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .fancybox-enabled .btn-fancybox {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .mt50 {
     margin-top: 80px;
