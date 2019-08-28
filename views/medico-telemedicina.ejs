@@ -1072,10 +1072,18 @@
         let $btnFancyNext = $('.btn-fancybox.right');
 
         $btnFancyNext.on('click', function() {
+            $('.fancybox-slide').css({overflow: 'hidden'});
             $('.fancybox-button--right').click();
+            setTimeout(function() {
+                $('.fancybox-slide').css({overflow: 'auto'});
+            }, 1000)
         })
         $btnFancyPrev.on('click', function() {
+            $('.fancybox-slide').css({overflow: 'hidden'});
             $('.fancybox-button--left').click();
+            setTimeout(function() {
+                $('.fancybox-slide').css({overflow: 'auto'});
+            }, 1000)
         })
     })
 </script>
